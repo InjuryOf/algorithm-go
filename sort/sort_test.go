@@ -25,3 +25,18 @@ func TestCocktail(t *testing.T) {
 	t.Logf("鸡尾酒排序前：%v\n", array)
 	t.Logf("鸡尾酒排序后结果：%v\n", cocktaol_sort(array))
 }
+
+func TestFastSort(t *testing.T) {
+
+	// 双边循环法
+	array := []int{4, 1, 6, 5, 3, 2, 8, 7}
+	t.Logf("双边快速排序前：%v\n", array)
+	bFastSort(array, 0, len(array)-1)
+	t.Logf("双边快速排序后结果：%v\n", array)
+
+	// 单边循环法
+	array = []int{4, 7, 3, 5, 6, 2, 8, 1}
+	t.Logf("单边快速排序前：%v\n", array)
+	sFastSort(array, 0, len(array)-1)
+	t.Logf("单边快速排序后结果：%v\n", array)
+}
