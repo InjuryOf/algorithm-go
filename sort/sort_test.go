@@ -27,7 +27,6 @@ func TestCocktail(t *testing.T) {
 }
 
 func TestFastSort(t *testing.T) {
-
 	// 双边循环法
 	array := []int{4, 1, 6, 5, 3, 2, 8, 7}
 	t.Logf("双边快速排序前：%v\n", array)

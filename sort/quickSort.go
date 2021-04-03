@@ -70,12 +70,28 @@ func unilateralPartition(array []int, startIndex int, endIndex int) int {
 	pivot := array[startIndex]
 	mark := startIndex
 	for i := startIndex + 1; i <= endIndex; i++ {
-		if array[i] < pivot{
-			mark ++
+		if array[i] < pivot {
+			mark++
 			array[mark], array[i] = array[i], array[mark]
 		}
 	}
 
 	array[startIndex], array[mark] = array[mark], pivot
 	return mark
+}
+
+// 栈方式实现
+type Stack struct {
+	Map map[string]int
+}
+
+func stackQuickSort(array []int, startIndex int, endIndex int) {
+	// 使用集合栈代替递归的函数栈
+	quickStack := Stack{}
+	quickStack.Map = map[string]int{"startIndex": startIndex}
+	quickStack.Map = map[string]int{"endIndex": endIndex}
+
+	for len(quickStack.Map) > 0 {
+		//param := quickStack[0]
+	}
 }
