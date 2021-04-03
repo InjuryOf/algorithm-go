@@ -61,6 +61,17 @@ func (lr *LRUCache) Put(key, value int) int {
 	return 0
 }
 
+// 删除key
+func (lr *LRUCache)Del(key int) int  {
+	cache := lr.hm
+	if node, exists := cache[key]; exists {
+		delete(cache, key)
+		node.pre.next = node.next
+		node.next.pre = node.pre
+	}
+	return 0
+}
+
 func (lr *LRUCache) moveToHead(node *LinkNode) int {
 	head := lr.head
 	//从当前位置删除节点
