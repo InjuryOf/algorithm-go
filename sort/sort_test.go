@@ -51,5 +51,9 @@ func TestHeapSort(t *testing.T) {
 	array = []int{7, 1, 3, 10, 5, 2, 8, 9, 6}
 	buildHeap(array)
 	fmt.Printf("初始构建二叉堆：%+v\n", array)
+}
 
+func TestCountSort(t *testing.T) {
+	array := []int{4, 4, 6, 5, 3, 2, 8, 1, 7, 5, 6, 0, 10}
+	fmt.Println("计数排序：", countSort(array))
 }
