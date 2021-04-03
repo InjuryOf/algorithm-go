@@ -1,6 +1,9 @@
 package sort
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestBubbleSort(t *testing.T) {
 
@@ -38,4 +41,15 @@ func TestFastSort(t *testing.T) {
 	t.Logf("单边快速排序前：%v\n", array)
 	sFastSort(array, 0, len(array)-1)
 	t.Logf("单边快速排序后结果：%v\n", array)
+}
+
+func TestHeapSort(t *testing.T) {
+	array := []int{1, 3, 2, 6, 5, 7, 8, 9, 19, 0}
+	upAdjust(array)
+	fmt.Printf("上浮二叉堆：%+v\n", array)
+
+	array = []int{7, 1, 3, 10, 5, 2, 8, 9, 6}
+	buildHeap(array)
+	fmt.Printf("初始构建二叉堆：%+v\n", array)
+
 }
