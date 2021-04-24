@@ -25,7 +25,7 @@ func TestWeightRound(t *testing.T) {
 
 	// 模拟请求
 	for i := 1; i <= 10; i++ {
-		currentNode := weightedRound(serverList)
+		currentNode := weightRound(serverList)
 		fmt.Printf("请求次数：%d 当前节点：%s-分配权重（%d）- 当前权重（%d）\n", i,
 		currentNode.name, currentNode.weight, currentNode.currentWeight)
 	}
