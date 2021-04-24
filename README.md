@@ -25,7 +25,7 @@
 
 
 ### 其他常用算法
-> - LRU缓存淘汰算法（最近最少使用策略）
+> - LRU缓存淘汰算法（最近最少使用策略）: [代码片段](../main/common/lru.go)
 ![](images/lru_run_result.png)
 > - 加权轮询算法：[代码片段](../main/common/weight_round.go)
 ![](images/weightRound.png)    
