@@ -26,8 +26,8 @@
 
 ### 其他常用算法
 > - LRU缓存淘汰算法（最近最少使用策略）
-
 ![](images/lru_run_result.png)
+> - 加权轮询算法
     
 
 ### Reference

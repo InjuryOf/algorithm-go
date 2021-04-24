@@ -1,10 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
 
-	c := make(chan int)
-	close(c)
-	c <- 10
+	fmt.Println("hello")
 	//go func() {
 	//	c <- 10
 	//	close(c)
